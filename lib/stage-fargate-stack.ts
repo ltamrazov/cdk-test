@@ -32,8 +32,8 @@ export class StageFargateStack extends cdk.Stack {
 
     new patterns.ApplicationLoadBalancedFargateService(this, 'StageAPIService', {
       cluster: cluster,
-      cpu: 512,
-      desiredCount: 6,
+      cpu: 256,
+      desiredCount: 2,
       taskImageOptions: {
         image: ecs.ContainerImage.fromRegistry('ghcr.io/ltamrazov/testingactions:latest', {
           credentials: creds,
@@ -42,7 +42,7 @@ export class StageFargateStack extends cdk.Stack {
         containerPort: 3000,
         containerName: 'api',
       },
-      memoryLimitMiB: 2048,
+      memoryLimitMiB: 1024,
       publicLoadBalancer: true,
     })
   }
