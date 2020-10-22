@@ -9,6 +9,9 @@ jobs:
     if: github.event.label.name == 'stage'
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
       - name: cdk deploy
         uses: youyo/aws-cdk-github-actions@v1
         with:
