@@ -1,6 +1,8 @@
+name: stack-diff
+
 on:
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   aws_cdk:
