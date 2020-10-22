@@ -20,6 +20,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.STAGE_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGE_AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'us-east-1'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: cdk synth
         uses: youyo/aws-cdk-github-actions@v1
