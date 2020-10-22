@@ -1,0 +1,21 @@
+name: provision
+on:
+  pull_request:
+    branches: [master]
+    types: [labeled]
+
+jobs:
+  provision:
+    if: github.event.label.name == 'stage'
+    runs-on: ubuntu-latest
+    steps:
+      - name: cdk deploy
+        uses: youyo/aws-cdk-github-actions@v1
+        with:
+          cdk_subcommand: 'deploy --require-approval never'
+          cdk_stack: 'stage-fargate'
+          actions_comment: false
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.STAGE_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGE_AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'us-east-1'
