@@ -1,0 +1,1021 @@
+{
+  "Resources": {
+    "servicesC9B6BABA": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/Resource"
+      }
+    },
+    "servicesPublicSubnet1Subnet3AB22BEE": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/19",
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "AvailabilityZone": "us-east-1a",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet1/Subnet"
+      }
+    },
+    "servicesPublicSubnet1RouteTable35ED11AD": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet1/RouteTable"
+      }
+    },
+    "servicesPublicSubnet1RouteTableAssociation1DD20040": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPublicSubnet1RouteTable35ED11AD"
+        },
+        "SubnetId": {
+          "Ref": "servicesPublicSubnet1Subnet3AB22BEE"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet1/RouteTableAssociation"
+      }
+    },
+    "servicesPublicSubnet1DefaultRouteAB81FABB": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPublicSubnet1RouteTable35ED11AD"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "servicesIGWF726CA41"
+        }
+      },
+      "DependsOn": [
+        "servicesVPCGW692F358C"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet1/DefaultRoute"
+      }
+    },
+    "servicesPublicSubnet1EIPB418032A": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet1/EIP"
+      }
+    },
+    "servicesPublicSubnet1NATGateway17849605": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "servicesPublicSubnet1EIPB418032A",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "servicesPublicSubnet1Subnet3AB22BEE"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet1/NATGateway"
+      }
+    },
+    "servicesPublicSubnet2SubnetFBBCBEF6": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.32.0/19",
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "AvailabilityZone": "us-east-1b",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet2/Subnet"
+      }
+    },
+    "servicesPublicSubnet2RouteTableA68A1855": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet2/RouteTable"
+      }
+    },
+    "servicesPublicSubnet2RouteTableAssociation02549593": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPublicSubnet2RouteTableA68A1855"
+        },
+        "SubnetId": {
+          "Ref": "servicesPublicSubnet2SubnetFBBCBEF6"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet2/RouteTableAssociation"
+      }
+    },
+    "servicesPublicSubnet2DefaultRoute291BE2BC": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPublicSubnet2RouteTableA68A1855"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "servicesIGWF726CA41"
+        }
+      },
+      "DependsOn": [
+        "servicesVPCGW692F358C"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet2/DefaultRoute"
+      }
+    },
+    "servicesPublicSubnet2EIPBC78F220": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet2/EIP"
+      }
+    },
+    "servicesPublicSubnet2NATGatewayD2D33900": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "servicesPublicSubnet2EIPBC78F220",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "servicesPublicSubnet2SubnetFBBCBEF6"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet2/NATGateway"
+      }
+    },
+    "servicesPublicSubnet3Subnet02120837": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.64.0/19",
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "AvailabilityZone": "us-east-1c",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet3"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet3/Subnet"
+      }
+    },
+    "servicesPublicSubnet3RouteTableD0301CD1": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet3"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet3/RouteTable"
+      }
+    },
+    "servicesPublicSubnet3RouteTableAssociation772AC1B2": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPublicSubnet3RouteTableD0301CD1"
+        },
+        "SubnetId": {
+          "Ref": "servicesPublicSubnet3Subnet02120837"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet3/RouteTableAssociation"
+      }
+    },
+    "servicesPublicSubnet3DefaultRouteC4093CE3": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPublicSubnet3RouteTableD0301CD1"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "servicesIGWF726CA41"
+        }
+      },
+      "DependsOn": [
+        "servicesVPCGW692F358C"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet3/DefaultRoute"
+      }
+    },
+    "servicesPublicSubnet3EIP24102C1F": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet3"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet3/EIP"
+      }
+    },
+    "servicesPublicSubnet3NATGatewayBD122044": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "servicesPublicSubnet3EIP24102C1F",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "servicesPublicSubnet3Subnet02120837"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PublicSubnet3"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PublicSubnet3/NATGateway"
+      }
+    },
+    "servicesPrivateSubnet1Subnet3F6FA602": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.96.0/19",
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "AvailabilityZone": "us-east-1a",
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet1/Subnet"
+      }
+    },
+    "servicesPrivateSubnet1RouteTable9C3FAF24": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet1/RouteTable"
+      }
+    },
+    "servicesPrivateSubnet1RouteTableAssociation4FFB9AA6": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPrivateSubnet1RouteTable9C3FAF24"
+        },
+        "SubnetId": {
+          "Ref": "servicesPrivateSubnet1Subnet3F6FA602"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet1/RouteTableAssociation"
+      }
+    },
+    "servicesPrivateSubnet1DefaultRouteBB74C587": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPrivateSubnet1RouteTable9C3FAF24"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "servicesPublicSubnet1NATGateway17849605"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet1/DefaultRoute"
+      }
+    },
+    "servicesPrivateSubnet2Subnet7B270A15": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.128.0/19",
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "AvailabilityZone": "us-east-1b",
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PrivateSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet2/Subnet"
+      }
+    },
+    "servicesPrivateSubnet2RouteTable4F6C77AD": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PrivateSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet2/RouteTable"
+      }
+    },
+    "servicesPrivateSubnet2RouteTableAssociation53BA4239": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPrivateSubnet2RouteTable4F6C77AD"
+        },
+        "SubnetId": {
+          "Ref": "servicesPrivateSubnet2Subnet7B270A15"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet2/RouteTableAssociation"
+      }
+    },
+    "servicesPrivateSubnet2DefaultRoute5508B4D0": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPrivateSubnet2RouteTable4F6C77AD"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "servicesPublicSubnet2NATGatewayD2D33900"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet2/DefaultRoute"
+      }
+    },
+    "servicesPrivateSubnet3SubnetACF625A3": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.160.0/19",
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "AvailabilityZone": "us-east-1c",
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PrivateSubnet3"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet3/Subnet"
+      }
+    },
+    "servicesPrivateSubnet3RouteTable6775030E": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services/PrivateSubnet3"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet3/RouteTable"
+      }
+    },
+    "servicesPrivateSubnet3RouteTableAssociation4BC4B79A": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPrivateSubnet3RouteTable6775030E"
+        },
+        "SubnetId": {
+          "Ref": "servicesPrivateSubnet3SubnetACF625A3"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet3/RouteTableAssociation"
+      }
+    },
+    "servicesPrivateSubnet3DefaultRoute25BDA228": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "servicesPrivateSubnet3RouteTable6775030E"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "servicesPublicSubnet3NATGatewayBD122044"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/PrivateSubnet3/DefaultRoute"
+      }
+    },
+    "servicesIGWF726CA41": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "stage-fargate/services"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/IGW"
+      }
+    },
+    "servicesVPCGW692F358C": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        },
+        "InternetGatewayId": {
+          "Ref": "servicesIGWF726CA41"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/services/VPCGW"
+      }
+    },
+    "StageAPIClusterB46E4A8B": {
+      "Type": "AWS::ECS::Cluster",
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPICluster/Resource"
+      }
+    },
+    "ServiceTaskExecutionRoleE8C204F5": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/ServiceTaskExecutionRole/Resource"
+      }
+    },
+    "ServiceTaskExecutionRoleDefaultPolicy34104517": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:DescribeSecret"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:secretsmanager:us-east-1:417040426478:secret:GithubContainerRegistry-DnLoPA"
+            },
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "StageAPIServiceTaskDefapiLogGroup8FDD9BBF",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ServiceTaskExecutionRoleDefaultPolicy34104517",
+        "Roles": [
+          {
+            "Ref": "ServiceTaskExecutionRoleE8C204F5"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/ServiceTaskExecutionRole/DefaultPolicy/Resource"
+      }
+    },
+    "StageAPIServiceLB34883D84": {
+      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties": {
+        "LoadBalancerAttributes": [
+          {
+            "Key": "deletion_protection.enabled",
+            "Value": "false"
+          }
+        ],
+        "Scheme": "internet-facing",
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "StageAPIServiceLBSecurityGroup5D7DB498",
+              "GroupId"
+            ]
+          }
+        ],
+        "Subnets": [
+          {
+            "Ref": "servicesPublicSubnet1Subnet3AB22BEE"
+          },
+          {
+            "Ref": "servicesPublicSubnet2SubnetFBBCBEF6"
+          },
+          {
+            "Ref": "servicesPublicSubnet3Subnet02120837"
+          }
+        ],
+        "Type": "application"
+      },
+      "DependsOn": [
+        "servicesPublicSubnet1DefaultRouteAB81FABB",
+        "servicesPublicSubnet2DefaultRoute291BE2BC",
+        "servicesPublicSubnet3DefaultRouteC4093CE3"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/LB/Resource"
+      }
+    },
+    "StageAPIServiceLBSecurityGroup5D7DB498": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Automatically created Security Group for ELB stagefargateStageAPIServiceLB7C13FF3B",
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow from anyone on port 80",
+            "FromPort": 80,
+            "IpProtocol": "tcp",
+            "ToPort": 80
+          }
+        ],
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/LB/SecurityGroup/Resource"
+      }
+    },
+    "StageAPIServiceLBSecurityGrouptostagefargateStageAPIServiceSecurityGroupA065C67430002C685FF6": {
+      "Type": "AWS::EC2::SecurityGroupEgress",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "StageAPIServiceLBSecurityGroup5D7DB498",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "DestinationSecurityGroupId": {
+          "Fn::GetAtt": [
+            "StageAPIServiceSecurityGroup07BD9AD9",
+            "GroupId"
+          ]
+        },
+        "FromPort": 3000,
+        "ToPort": 3000
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/LB/SecurityGroup/to stagefargateStageAPIServiceSecurityGroupA065C674:3000"
+      }
+    },
+    "StageAPIServiceLBPublicListenerE463E634": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "DefaultActions": [
+          {
+            "TargetGroupArn": {
+              "Ref": "StageAPIServiceLBPublicListenerECSGroupFFC2C31C"
+            },
+            "Type": "forward"
+          }
+        ],
+        "LoadBalancerArn": {
+          "Ref": "StageAPIServiceLB34883D84"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/LB/PublicListener/Resource"
+      }
+    },
+    "StageAPIServiceLBPublicListenerECSGroupFFC2C31C": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "Port": 80,
+        "Protocol": "HTTP",
+        "TargetType": "ip",
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/LB/PublicListener/ECSGroup/Resource"
+      }
+    },
+    "StageAPIServiceTaskDefTaskRoleEFE2255C": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/TaskDef/TaskRole/Resource"
+      }
+    },
+    "StageAPIServiceTaskDef6E0F9E62": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Essential": true,
+            "Image": "ghcr.io/ltamrazov/testingactions:latest",
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "StageAPIServiceTaskDefapiLogGroup8FDD9BBF"
+                },
+                "awslogs-stream-prefix": "StageAPIService",
+                "awslogs-region": "us-east-1"
+              }
+            },
+            "Name": "api",
+            "PortMappings": [
+              {
+                "ContainerPort": 3000,
+                "Protocol": "tcp"
+              }
+            ],
+            "RepositoryCredentials": {
+              "CredentialsParameter": "arn:aws:secretsmanager:us-east-1:417040426478:secret:GithubContainerRegistry-DnLoPA"
+            }
+          }
+        ],
+        "Cpu": "256",
+        "ExecutionRoleArn": {
+          "Fn::GetAtt": [
+            "ServiceTaskExecutionRoleE8C204F5",
+            "Arn"
+          ]
+        },
+        "Family": "stagefargateStageAPIServiceTaskDef59406F9D",
+        "Memory": "1024",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "TaskRoleArn": {
+          "Fn::GetAtt": [
+            "StageAPIServiceTaskDefTaskRoleEFE2255C",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/TaskDef/Resource"
+      }
+    },
+    "StageAPIServiceTaskDefapiLogGroup8FDD9BBF": {
+      "Type": "AWS::Logs::LogGroup",
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/TaskDef/api/LogGroup/Resource"
+      }
+    },
+    "StageAPIServiceCCAE641B": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "Cluster": {
+          "Ref": "StageAPIClusterB46E4A8B"
+        },
+        "DeploymentConfiguration": {
+          "MaximumPercent": 200,
+          "MinimumHealthyPercent": 50
+        },
+        "DesiredCount": 2,
+        "EnableECSManagedTags": false,
+        "HealthCheckGracePeriodSeconds": 60,
+        "LaunchType": "FARGATE",
+        "LoadBalancers": [
+          {
+            "ContainerName": "api",
+            "ContainerPort": 3000,
+            "TargetGroupArn": {
+              "Ref": "StageAPIServiceLBPublicListenerECSGroupFFC2C31C"
+            }
+          }
+        ],
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "DISABLED",
+            "SecurityGroups": [
+              {
+                "Fn::GetAtt": [
+                  "StageAPIServiceSecurityGroup07BD9AD9",
+                  "GroupId"
+                ]
+              }
+            ],
+            "Subnets": [
+              {
+                "Ref": "servicesPrivateSubnet1Subnet3F6FA602"
+              },
+              {
+                "Ref": "servicesPrivateSubnet2Subnet7B270A15"
+              },
+              {
+                "Ref": "servicesPrivateSubnet3SubnetACF625A3"
+              }
+            ]
+          }
+        },
+        "TaskDefinition": {
+          "Ref": "StageAPIServiceTaskDef6E0F9E62"
+        }
+      },
+      "DependsOn": [
+        "StageAPIServiceLBPublicListenerECSGroupFFC2C31C",
+        "StageAPIServiceLBPublicListenerE463E634"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/Service/Service"
+      }
+    },
+    "StageAPIServiceSecurityGroup07BD9AD9": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "stage-fargate/StageAPIService/Service/SecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": {
+          "Ref": "servicesC9B6BABA"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/Service/SecurityGroup/Resource"
+      }
+    },
+    "StageAPIServiceSecurityGroupfromstagefargateStageAPIServiceLBSecurityGroup0A3A00343000575EBE73": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "FromPort": 3000,
+        "GroupId": {
+          "Fn::GetAtt": [
+            "StageAPIServiceSecurityGroup07BD9AD9",
+            "GroupId"
+          ]
+        },
+        "SourceSecurityGroupId": {
+          "Fn::GetAtt": [
+            "StageAPIServiceLBSecurityGroup5D7DB498",
+            "GroupId"
+          ]
+        },
+        "ToPort": 3000
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/StageAPIService/Service/SecurityGroup/from stagefargateStageAPIServiceLBSecurityGroup0A3A0034:3000"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.69.0,@aws-cdk/assets=1.69.0,@aws-cdk/aws-applicationautoscaling=1.69.0,@aws-cdk/aws-autoscaling=1.69.0,@aws-cdk/aws-autoscaling-common=1.69.0,@aws-cdk/aws-autoscaling-hooktargets=1.69.0,@aws-cdk/aws-certificatemanager=1.69.0,@aws-cdk/aws-cloudwatch=1.69.0,@aws-cdk/aws-codeguruprofiler=1.69.0,@aws-cdk/aws-ec2=1.69.0,@aws-cdk/aws-ecr=1.69.0,@aws-cdk/aws-ecr-assets=1.69.0,@aws-cdk/aws-ecs=1.69.0,@aws-cdk/aws-ecs-patterns=1.69.0,@aws-cdk/aws-elasticloadbalancingv2=1.69.0,@aws-cdk/aws-events=1.69.0,@aws-cdk/aws-events-targets=1.69.0,@aws-cdk/aws-iam=1.69.0,@aws-cdk/aws-kms=1.69.0,@aws-cdk/aws-lambda=1.69.0,@aws-cdk/aws-logs=1.69.0,@aws-cdk/aws-route53=1.69.0,@aws-cdk/aws-route53-targets=1.69.0,@aws-cdk/aws-s3=1.69.0,@aws-cdk/aws-s3-assets=1.69.0,@aws-cdk/aws-sam=1.69.0,@aws-cdk/aws-secretsmanager=1.69.0,@aws-cdk/aws-servicediscovery=1.69.0,@aws-cdk/aws-sns=1.69.0,@aws-cdk/aws-sns-subscriptions=1.69.0,@aws-cdk/aws-sqs=1.69.0,@aws-cdk/aws-ssm=1.69.0,@aws-cdk/cloud-assembly-schema=1.69.0,@aws-cdk/core=1.69.0,@aws-cdk/custom-resources=1.69.0,@aws-cdk/cx-api=1.69.0,@aws-cdk/region-info=1.69.0,jsii-runtime=node.js/v14.13.0"
+      },
+      "Metadata": {
+        "aws:cdk:path": "stage-fargate/CDKMetadata/Default"
+      }
+    }
+  },
+  "Outputs": {
+    "StageAPIServiceLoadBalancerDNS78D28427": {
+      "Value": {
+        "Fn::GetAtt": [
+          "StageAPIServiceLB34883D84",
+          "DNSName"
+        ]
+      }
+    },
+    "StageAPIServiceServiceURL3EF5C9AB": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            {
+              "Fn::GetAtt": [
+                "StageAPIServiceLB34883D84",
+                "DNSName"
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

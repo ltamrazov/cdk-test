@@ -1,0 +1,1521 @@
+{
+  "version": "6.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "stage-fargate": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://417040426478/us-east-1",
+      "properties": {
+        "templateFile": "stage-fargate.template.json"
+      },
+      "metadata": {
+        "/stage-fargate/services/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesC9B6BABA",
+            "trace": [
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1190:21)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet1Subnet3AB22BEE",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1518:20)",
+              "new PublicSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1732:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1370:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet1RouteTable35ED11AD",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1535:19)",
+              "new PublicSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1732:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1370:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet1RouteTableAssociation1DD20040",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1541:5)",
+              "new PublicSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1732:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1370:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet1DefaultRouteAB81FABB",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:19)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1238:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1237:46)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet1EIPB418032A",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1744:21)",
+              "NatGatewayProvider.configureNat (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1322:14)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1244:14)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet1NATGateway17849605",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1742:17)",
+              "NatGatewayProvider.configureNat (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1322:14)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1244:14)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet2SubnetFBBCBEF6",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1518:20)",
+              "new PublicSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1732:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1370:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet2RouteTableA68A1855",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1535:19)",
+              "new PublicSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1732:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1370:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet2RouteTableAssociation02549593",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1541:5)",
+              "new PublicSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1732:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1370:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet2DefaultRoute291BE2BC",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:19)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1238:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1237:46)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet2EIPBC78F220",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1744:21)",
+              "NatGatewayProvider.configureNat (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1322:14)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1244:14)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet2NATGatewayD2D33900",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1742:17)",
+              "NatGatewayProvider.configureNat (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1322:14)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1244:14)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet3Subnet02120837",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1518:20)",
+              "new PublicSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1732:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1370:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet3RouteTableD0301CD1",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1535:19)",
+              "new PublicSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1732:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1370:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet3RouteTableAssociation772AC1B2",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1541:5)",
+              "new PublicSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1732:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1370:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet3DefaultRouteC4093CE3",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:19)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1238:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1237:46)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet3/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet3EIP24102C1F",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1744:21)",
+              "NatGatewayProvider.configureNat (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1322:14)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1244:14)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PublicSubnet3/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPublicSubnet3NATGatewayBD122044",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1742:17)",
+              "NatGatewayProvider.configureNat (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:173:27)",
+              "Vpc.createNatGateways (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1322:14)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1244:14)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet1Subnet3F6FA602",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1518:20)",
+              "new PrivateSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1770:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1375:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet1RouteTable9C3FAF24",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1535:19)",
+              "new PrivateSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1770:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1375:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet1RouteTableAssociation4FFB9AA6",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1541:5)",
+              "new PrivateSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1770:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1375:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet1DefaultRouteBB74C587",
+            "trace": [
+              "PrivateSubnet.addRoute (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1603:19)",
+              "NatGatewayProvider.configureSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:186:12)",
+              "NatGatewayProvider.configureNat (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:179:12)",
+              "Vpc.createNatGateways (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1322:14)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1244:14)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet2Subnet7B270A15",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1518:20)",
+              "new PrivateSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1770:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1375:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet2RouteTable4F6C77AD",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1535:19)",
+              "new PrivateSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1770:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1375:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet2RouteTableAssociation53BA4239",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1541:5)",
+              "new PrivateSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1770:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1375:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet2DefaultRoute5508B4D0",
+            "trace": [
+              "PrivateSubnet.addRoute (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1603:19)",
+              "NatGatewayProvider.configureSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:186:12)",
+              "NatGatewayProvider.configureNat (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:179:12)",
+              "Vpc.createNatGateways (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1322:14)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1244:14)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet3SubnetACF625A3",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1518:20)",
+              "new PrivateSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1770:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1375:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet3RouteTable6775030E",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1535:19)",
+              "new PrivateSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1770:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1375:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet3RouteTableAssociation4BC4B79A",
+            "trace": [
+              "new Subnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1541:5)",
+              "new PrivateSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1770:5)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1375:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1352:28)",
+              "Vpc.createSubnets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:12)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1219:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/PrivateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesPrivateSubnet3DefaultRoute25BDA228",
+            "trace": [
+              "PrivateSubnet.addRoute (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1603:19)",
+              "NatGatewayProvider.configureSubnet (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:186:12)",
+              "NatGatewayProvider.configureNat (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:179:12)",
+              "Vpc.createNatGateways (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1322:14)",
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1244:14)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesIGWF726CA41",
+            "trace": [
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1226:19)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/services/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "servicesVPCGW692F358C",
+            "trace": [
+              "new Vpc (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1232:19)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:13:17)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPICluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIClusterB46E4A8B",
+            "trace": [
+              "new Cluster (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/cluster.ts:129:21)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:17:21)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/ServiceTaskExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceTaskExecutionRoleE8C204F5",
+            "trace": [
+              "new Role (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:27:18)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/ServiceTaskExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceTaskExecutionRoleDefaultPolicy34104517",
+            "trace": [
+              "new Policy (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-iam/lib/policy.ts:141:22)",
+              "Role.addToPrincipalPolicy (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Function.addToPrincipal (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Import.grantRead (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:150:30)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:31:11)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceLB34883D84",
+            "trace": [
+              "new BaseLoadBalancer (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-load-balancer.ts:138:22)",
+              "new ApplicationLoadBalancer (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.ts:64:5)",
+              "new ApplicationLoadBalancedServiceBase (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.ts:334:9)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:111:5)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceLBSecurityGroup5D7DB498",
+            "trace": [
+              "new SecurityGroup (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:371:26)",
+              "new ApplicationLoadBalancer (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.ts:71:52)",
+              "new ApplicationLoadBalancedServiceBase (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.ts:334:9)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:111:5)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/LB/SecurityGroup/to stagefargateStageAPIServiceSecurityGroupA065C674:3000": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceLBSecurityGrouptostagefargateStageAPIServiceSecurityGroupA065C67430002C685FF6",
+            "trace": [
+              "SecurityGroup.addEgressRule (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:104:7)",
+              "SecurityGroup.addEgressRule (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:418:13)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:131:23",
+              "ReactiveList.forEachAndForever (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:267:7)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:130:45",
+              "ReactiveList.forEachAndForever (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:267:7)",
+              "Connections.allowTo (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:129:26)",
+              "Connections.allowFrom (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:161:25)",
+              "ApplicationListener.registerConnectable (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:414:29)",
+              "ApplicationTargetGroup.registerConnectable (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.ts:147:16)",
+              "Object.attachToApplicationTargetGroup (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.ts:429:21)",
+              "FargateService.attachToApplicationTargetGroup (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.ts:391:43)",
+              "ApplicationTargetGroup.addTarget (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.ts:121:29)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.ts:424:22)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:164:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceLBPublicListenerE463E634",
+            "trace": [
+              "new BaseListener (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-listener.ts:20:22)",
+              "new ApplicationListener (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:148:5)",
+              "ApplicationLoadBalancer.addListener (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.ts:86:12)",
+              "new ApplicationLoadBalancedServiceBase (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.ts:350:34)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:111:5)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceLBPublicListenerECSGroupFFC2C31C",
+            "trace": [
+              "new TargetGroupBase (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.ts:237:21)",
+              "new ApplicationTargetGroup (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.ts:94:5)",
+              "ApplicationListener.addTargets (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:316:19)",
+              "new ApplicationLoadBalancedServiceBase (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.ts:355:38)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:111:5)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceLoadBalancerDNS78D28427",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.ts:406:5)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:111:5)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceServiceURL3EF5C9AB",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.ts:407:5)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:111:5)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceTaskDefTaskRoleEFE2255C",
+            "trace": [
+              "new Role (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new TaskDefinition (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.ts:295:39)",
+              "new FargateTaskDefinition (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-task-definition.ts:79:5)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:121:29)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceTaskDef6E0F9E62",
+            "trace": [
+              "new TaskDefinition (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.ts:299:21)",
+              "new FargateTaskDefinition (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-task-definition.ts:79:5)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:121:29)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/TaskDef/api/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceTaskDefapiLogGroup8FDD9BBF",
+            "trace": [
+              "new LogGroup (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-logs/lib/log-group.ts:365:22)",
+              "AwsLogDriver.bind (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/log-drivers/aws-log-driver.ts:95:44)",
+              "new ContainerDefinition (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/container-definition.ts:385:44)",
+              "FargateTaskDefinition.addContainer (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.ts:414:12)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:136:45)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceCCAE641B",
+            "trace": [
+              "new BaseService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.ts:340:21)",
+              "new FargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.ts:147:5)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:149:20)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceSecurityGroup07BD9AD9",
+            "trace": [
+              "new SecurityGroup (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:371:26)",
+              "FargateService.configureAwsVpcNetworkingWithSecurityGroups (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.ts:623:25)",
+              "new FargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.ts:166:10)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:149:20)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/StageAPIService/Service/SecurityGroup/from stagefargateStageAPIServiceLBSecurityGroup0A3A0034:3000": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StageAPIServiceSecurityGroupfromstagefargateStageAPIServiceLBSecurityGroup0A3A00343000575EBE73",
+            "trace": [
+              "SecurityGroup.addIngressRule (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:86:7)",
+              "SecurityGroup.addIngressRule (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:388:13)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:154:23",
+              "ReactiveList.forEachAndForever (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:267:7)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:153:45",
+              "ReactiveList.forEachAndForever (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:267:7)",
+              "Connections.allowFrom (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:152:26)",
+              "ApplicationListener.registerConnectable (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:414:29)",
+              "ApplicationTargetGroup.registerConnectable (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.ts:147:16)",
+              "Object.attachToApplicationTargetGroup (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.ts:429:21)",
+              "FargateService.attachToApplicationTargetGroup (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.ts:391:43)",
+              "ApplicationTargetGroup.addTarget (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.ts:121:29)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.ts:424:22)",
+              "new ApplicationLoadBalancedFargateService (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.ts:164:10)",
+              "new StageFargateStack (/Users/tamrazov/playground/cdk-test/lib/stage-fargate-stack.ts:33:5)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/bin/stage-fargate-stack.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Module.m._compile (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:791:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/tamrazov/.nvm/versions/node/v14.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/stage-fargate/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/core/lib/stage.ts:177:23)",
+              "process.<anonymous> (/Users/tamrazov/playground/cdk-test/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:486:12)",
+              "process.emit (/Users/tamrazov/playground/cdk-test/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
